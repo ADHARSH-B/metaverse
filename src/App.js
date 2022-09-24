@@ -1,24 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Auth from './components/Moralis_Authentication/Auth';
+import { MoralisProvider } from "react-moralis";
 function App() {
   return (
+    <MoralisProvider appId="Cw2XOQVnfptT7SbBouFjeAZt9P2BK3OaVoG98qyJ" serverUrl="https://mfaocdoyxwpv.usemoralis.com:2053/server">
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Auth/>
     </div>
+    </MoralisProvider>
   );
 }
 
